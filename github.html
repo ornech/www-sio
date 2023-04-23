@@ -44,6 +44,7 @@
 									<h2>Branche distante</h2>
 									<p>Pour afficher vos branches distantes.</p>
 									<pre><code>git remote -v</code></pre>
+									
 									<p>	La commande <code>git push --set-upstream origin master</code> permet de pousser votre branche locale nommée "master" vers la branche "master" du référentiel distant "origin" sur GitHub. Elle permet également de configurer votre branche locale "master" pour qu'elle suit la branche "master" du dépôt distant "origin".</p>
 									<p>Plus précisément, l'option <b>--set-upstream</b> est utilisée pour définir une "relation de suivi" entre votre branche locale et une branche distante. Cela signifie que lorsque vous utilisez la commande <code>git pull</code> ou <code>git fetch</code>, Git sait où aller chercher les mises à jour pour votre branche locale.</p>
 									<p>La première fois que vous poussez une branche locale vers un dépôt distant, vous devez utiliser l'option <b>--set-upstream</b> pour configurer la relation de suivi. Ensuite, vous pouvez simplement utiliser la commande <code>git push</code> pour pousser vos modifications vers le dépôt distant.</p>
