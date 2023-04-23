@@ -31,7 +31,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Connexion SSH avec GITHUB</h1>
+										<h1>GITHUB</h1>
 									</header>
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
@@ -42,7 +42,7 @@
 									<hr class="major" />
 
 									
-									
+									<h2>Connexion avec SSH</h2>		
 <ol>
 	<li>Générez une clé SSH sur votre ordinateur en utilisant la commande ssh-keygen. Si vous avez déjà une clé, vous pouvez passer à l'étape suivante.</li>
     <li>Ajoutez la clé publique à votre compte GitHub en accédant à vos paramètres de compte, en sélectionnant "Clés SSH et GPG" et en ajoutant la clé publique.</li>
@@ -54,9 +54,9 @@
 	<li>Utilisez la commande git config pour configurer Git pour utiliser votre clé SSH.
 		<pre>
 		<code>
-			git config --global user.email "votre_email@exemple.com"
-			git config --global user.name "votre_nom_utilisateur"
-			git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa"
+			git config --global user.email "votre_email@exemple.com"<br>
+			git config --global user.name "votre_nom_utilisateur"<br>
+			git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa"<br>
 		</code>
 		</pre>
 	
