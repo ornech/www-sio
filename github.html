@@ -51,12 +51,14 @@
 	 <code>git remote add origin git@github.com:<nom_utilisateur>/<nom_projet>.git
 	</code>
 	</li>
-	<li>Utilisez la commande git config pour configurer Git pour utiliser votre clé SSH. 
+	<li>Utilisez la commande git config pour configurer Git pour utiliser votre clé SSH.
+		<pre>
 		<code>
 			git config --global user.email "votre_email@exemple.com"
 			git config --global user.name "votre_nom_utilisateur"
 			git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa"
 		</code>
+		</pre>
 	
        Remplacez votre_email@exemple.com par votre adresse e-mail et votre_nom_utilisateur par votre nom d'utilisateur GitHub.</li>
     <li>Vous pouvez maintenant pousser vos modifications vers GitHub en utilisant la commande git push. Vous ne serez pas invité à entrer votre mot de passe car Git utilisera automatiquement votre clé SSH.</li>
