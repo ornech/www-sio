@@ -48,12 +48,15 @@
     2. Ajoutez la clé publique à votre compte GitHub en accédant à vos paramètres de compte, en sélectionnant "Clés SSH et GPG" et en ajoutant la clé publique.
     3. Dans le répertoire de votre projet local, utilisez la commande git remote add pour ajouter votre référentiel GitHub distant. Par exemple :
        php
-    • git remote add origin git@github.com:<nom_utilisateur>/<nom_projet>.git
-    • Utilisez la commande git config pour configurer Git pour utiliser votre clé SSH. Par exemple :
-arduino
-    4. git config --global user.email "votre_email@exemple.com"
+	   <pre> <code>git remote add origin git@github.com:<nom_utilisateur>/<nom_projet>.git
+	</code></pre>
+    • Utilisez la commande git config pour configurer Git pour utiliser votre clé SSH. 
+
+    4. 
+	<pre> <code>git config --global user.email "votre_email@exemple.com"
        git config --global user.name "votre_nom_utilisateur"
        git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa"
+	   </code></pre>
        Remplacez votre_email@exemple.com par votre adresse e-mail et votre_nom_utilisateur par votre nom d'utilisateur GitHub.
     5. Vous pouvez maintenant pousser vos modifications vers GitHub en utilisant la commande git push. Vous ne serez pas invité à entrer votre mot de passe car Git utilisera automatiquement votre clé SSH.
 
