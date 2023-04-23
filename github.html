@@ -41,7 +41,15 @@
 
 									<hr class="major" />
 
-									
+									<h2>Branche distante</h2>
+									<p>	La commande <code>git push --set-upstream origin master</code> permet de pousser votre branche locale nommée "master" vers la branche "master" du référentiel distant "origin" sur GitHub. Elle permet également de configurer votre branche locale "master" pour qu'elle suit la branche "master" du référentiel distant "origin".</p>
+									<p>Plus précisément, l'option <b>--set-upstream</b> est utilisée pour définir une "relation de suivi" entre votre branche locale et une branche distante. Cela signifie que lorsque vous utilisez la commande <code>git pull</code> ou <code>git fetch</code>, Git sait où aller chercher les mises à jour pour votre branche locale.</p>
+									<p>La première fois que vous poussez une branche locale vers un référentiel distant, vous devez utiliser l'option <b>--set-upstream</b> pour configurer la relation de suivi. Ensuite, vous pouvez simplement utiliser la commande <code>git push<code> pour pousser vos modifications vers le référentiel distant.</p>
+									<p>En utilisant origin master, vous indiquez que vous voulez pousser la branche locale "master" vers la branche "master" du référentiel distant nommé "origin".</p>
+
+
+									<hr class="major" />
+
 									<h2>Connexion avec SSH</h2>		
 <ol>
 	<li>Générez une clé SSH sur votre ordinateur en utilisant la commande ssh-keygen. Si vous avez déjà une clé, vous pouvez passer à l'étape suivante.</li>
