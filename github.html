@@ -42,10 +42,12 @@
 									<hr class="major" />
 
 									<h2>Branche distante</h2>
-									<p>	La commande <code>git push --set-upstream origin master</code> permet de pousser votre branche locale nommée "master" vers la branche "master" du référentiel distant "origin" sur GitHub. Elle permet également de configurer votre branche locale "master" pour qu'elle suit la branche "master" du référentiel distant "origin".</p>
+									<p>Pour afficher vos branches distantes.</p>
+									<pre><code>git remote -v</code></pre>
+									<p>	La commande <code>git push --set-upstream origin master</code> permet de pousser votre branche locale nommée "master" vers la branche "master" du référentiel distant "origin" sur GitHub. Elle permet également de configurer votre branche locale "master" pour qu'elle suit la branche "master" du dépôt distant "origin".</p>
 									<p>Plus précisément, l'option <b>--set-upstream</b> est utilisée pour définir une "relation de suivi" entre votre branche locale et une branche distante. Cela signifie que lorsque vous utilisez la commande <code>git pull</code> ou <code>git fetch</code>, Git sait où aller chercher les mises à jour pour votre branche locale.</p>
-									<p>La première fois que vous poussez une branche locale vers un référentiel distant, vous devez utiliser l'option <b>--set-upstream</b> pour configurer la relation de suivi. Ensuite, vous pouvez simplement utiliser la commande <code>git push</code> pour pousser vos modifications vers le référentiel distant.</p>
-									<p>En utilisant origin master, vous indiquez que vous voulez pousser la branche locale "master" vers la branche "master" du référentiel distant nommé "origin".</p>
+									<p>La première fois que vous poussez une branche locale vers un dépôt distant, vous devez utiliser l'option <b>--set-upstream</b> pour configurer la relation de suivi. Ensuite, vous pouvez simplement utiliser la commande <code>git push</code> pour pousser vos modifications vers le dépôt distant.</p>
+									<p>En utilisant origin master, vous indiquez que vous voulez pousser la branche locale "master" vers la branche "master" du dépôt  distant nommé "origin".</p>
 
 
 									<hr class="major" />
@@ -54,7 +56,7 @@
 <ol>
 	<li>Générez une clé SSH sur votre ordinateur en utilisant la commande ssh-keygen. Si vous avez déjà une clé, vous pouvez passer à l'étape suivante.</li>
     <li>Ajoutez la clé publique à votre compte GitHub en accédant à vos paramètres de compte, en sélectionnant "Clés SSH et GPG" et en ajoutant la clé publique.</li>
-    <li>Dans le répertoire de votre projet local, utilisez la commande git remote add pour ajouter votre référentiel GitHub distant. Par exemple :</li>
+    <li>Dans le répertoire de votre projet local, utilisez la commande git remote add pour ajouter votre dépôt GitHub distant. Par exemple :</li>
     
 		<pre> <code>git remote add origin git@github.com:<nom_utilisateur>/<nom_projet>.git</code></pre>
 
