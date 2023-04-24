@@ -67,6 +67,25 @@
 					<h3>Afficher vos branches distantes.</h3>
 					<pre><code>git remote -v</code></pre>
 
+					<h3>Utiliser une branche distante.</h3>
+
+					La commande <code>git push --set-upstream origin master</code> est utilisée pour envoyer les
+					modifications locales d'une branche
+					nommée "master" vers une branche distante nommée "origin/master". Cette commande configure également
+					la branche locale
+					"master" pour suivre la branche distante "origin/master", de sorte que les futures commandes "git
+					push" et "git pull" se
+					réfèreront automatiquement à cette branche distante.
+
+					Voici un bref résumé de chacun des éléments de la commande :
+
+					"git push" : commande Git pour envoyer des modifications locales vers une branche distante.
+					"--set-upstream" : option pour définir une branche distante en tant que branche de suivi pour la
+					branche locale.
+					"origin" : nom de la branche distante vers laquelle les modifications seront envoyées.
+					"master" : nom de la branche locale qui sera envoyée vers la branche distante nommée
+					"origin/master".
+
 					<p> La commande <code>git push --set-upstream origin master</code> permet de pousser votre branche
 						locale nommée "master" vers la branche "master" du référentiel distant "origin" sur GitHub. Elle
 						permet également de configurer votre branche locale "master" pour qu'elle suit la branche
