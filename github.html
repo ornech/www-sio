@@ -5,130 +5,175 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Generic - Editorial by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>Generic - Editorial by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+<body class="is-preload">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
-									<ul class="icons">
-										<li><a href="https://github.com/ornech/www" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-								</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>GITHUB</h1>
-									</header>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+					<ul class="icons">
+						<li><a href="https://github.com/ornech/www" class="icon brands fa-github"><span
+									class="label">Github</span></a></li>
+					</ul>
+				</header>
 
-									<p>Pour automatiser les push vers GitHub en utilisant une clé SSH sans avoir à entrer de mot de passe, vous pouvez suivre les étapes suivantes :
-									</p>
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<h1>GITHUB</h1>
+					</header>
 
-									<hr class="major" />
-									
-									<h2 id="branche_distante">Branche distante</h2>
-									<p>Pour afficher vos branches distantes.</p>
-									<pre><code>git remote -v</code></pre>
-									
-									<p>	La commande <code>git push --set-upstream origin master</code> permet de pousser votre branche locale nommée "master" vers la branche "master" du référentiel distant "origin" sur GitHub. Elle permet également de configurer votre branche locale "master" pour qu'elle suit la branche "master" du dépôt distant "origin".</p>
-									<p>Plus précisément, l'option <b>--set-upstream</b> est utilisée pour définir une "relation de suivi" entre votre branche locale et une branche distante. Cela signifie que lorsque vous utilisez la commande <code>git pull</code> ou <code>git fetch</code>, Git sait où aller chercher les mises à jour pour votre branche locale.</p>
-									<p>La première fois que vous poussez une branche locale vers un dépôt distant, vous devez utiliser l'option <b>--set-upstream</b> pour configurer la relation de suivi. Ensuite, vous pouvez simplement utiliser la commande <code>git push</code> pour pousser vos modifications vers le dépôt distant.</p>
-									<p>En utilisant origin master, vous indiquez que vous voulez pousser la branche locale "master" vers la branche "master" du dépôt  distant nommé "origin".</p>
+					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+
+					<p>Pour automatiser les push vers GitHub en utilisant une clé SSH sans avoir à entrer de mot de
+						passe, vous pouvez suivre les étapes suivantes :
+					</p>
+
+					<hr class="major" />
+
+					<h2 id="branche_distante">Branche distante</h2>
+					<h3>Ajouter une branche distante</h3>
+					<p>La commande
+						<code>git remote add origin git@github.com:[nom_utilisateur]/[nom_du_depot].git</code> permet
+						d'ajouter un nouveau dépôt distant ("remote") à un projet Git existant.<BR>
+						Ici le dépôt distant est nommé <i>"origin"</i>, et utilise l'URL
+						<i>git@github.com:[nom_utilisateur]/[nom_du_depot].git</i> pour spécifier l'emplacement distant
+						GitHub.
+					</p>
+
+					<p>
+					<ol> Notez que :
+						<li>[nom_utilisateur] doit être remplacé par votre nom d'utilisateur GitHub</li>
+						<li>[nom_du_depot] doit être remplacé par le nom de votre dépôt sur GitHub. </li>
+						<li> commande est généralement utilisée lors de la première mise en place d'un projet Git sur
+							GitHub.</li>
+					</ol>
+					</p>
+
+					<h3>Afficher vos branches distantes.</h3>
+					<pre><code>git remote -v</code></pre>
+
+					<p> La commande <code>git push --set-upstream origin master</code> permet de pousser votre branche
+						locale nommée "master" vers la branche "master" du référentiel distant "origin" sur GitHub. Elle
+						permet également de configurer votre branche locale "master" pour qu'elle suit la branche
+						"master" du dépôt distant "origin".</p>
+					<p>Plus précisément, l'option <b>--set-upstream</b> est utilisée pour définir une "relation de
+						suivi" entre votre branche locale et une branche distante. Cela signifie que lorsque vous
+						utilisez la commande <code>git pull</code> ou <code>git fetch</code>, Git sait où aller chercher
+						les mises à jour pour votre branche locale.</p>
+					<p>La première fois que vous poussez une branche locale vers un dépôt distant, vous devez utiliser
+						l'option <b>--set-upstream</b> pour configurer la relation de suivi. Ensuite, vous pouvez
+						simplement utiliser la commande <code>git push</code> pour pousser vos modifications vers le
+						dépôt distant.</p>
+					<p>En utilisant origin master, vous indiquez que vous voulez pousser la branche locale "master" vers
+						la branche "master" du dépôt distant nommé "origin".</p>
 
 
-									<hr class="major" />
+					<hr class="major" />
 
-									<h2 id="connexion_ssh">Connexion avec SSH</h2>		
-<ol>
-	<li>Générez une clé SSH sur votre ordinateur en utilisant la commande ssh-keygen. Si vous avez déjà une clé, vous pouvez passer à l'étape suivante.</li>
-    <li>Ajoutez la clé publique à votre compte GitHub en accédant à vos paramètres de compte, en sélectionnant "Clés SSH et GPG" et en ajoutant la clé publique.</li>
-    <li>Dans le répertoire de votre projet local, utilisez la commande git remote add pour ajouter votre dépôt GitHub distant. Par exemple :</li>
-    
-		<pre> <code>git remote add origin git@github.com:<nom_utilisateur>/<nom_projet>.git</code></pre>
+					<h2 id="connexion_ssh">Connexion avec SSH</h2>
+					<ol>
+						<li>Générez une clé SSH sur votre ordinateur en utilisant la commande ssh-keygen. Si vous avez
+							déjà une clé, vous pouvez passer à l'étape suivante.</li>
+						<li>Ajoutez la clé publique à votre compte GitHub en accédant à vos paramètres de compte, en
+							sélectionnant "Clés SSH et GPG" et en ajoutant la clé publique.</li>
+						<li>Dans le répertoire de votre projet local, utilisez la commande git remote add pour ajouter
+							votre dépôt GitHub distant. Par exemple :</li>
 
-	<li>Utilisez la commande <code>git config</code> pour configurer Git afin d'utiliser votre clé SSH.</li>
-		
-		<pre> <code>git config --global user.email "votre_email@exemple.com"<br>git config --global user.name "votre_nom_utilisateur"<br>git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa"</code></pre>
-		Remplacez votre_email@exemple.com par votre adresse e-mail et votre_nom_utilisateur par votre nom d'utilisateur GitHub.
-	
-    <li>Vous pouvez maintenant pousser vos modifications vers GitHub en utilisant la commande git push. Vous ne serez pas invité à entrer votre mot de passe car Git utilisera automatiquement votre clé SSH.</li>
+						<pre> <code>git remote add origin git@github.com:<nom_utilisateur>/<nom_projet>.git</code></pre>
 
-	Remarque : Assurez-vous de garder votre clé privée en sécurité sur votre ordinateur. Ne partagez jamais votre clé privée avec d'autres personnes.
+						<li>Utilisez la commande <code>git config</code> pour configurer Git afin d'utiliser votre clé
+							SSH.</li>
 
-								</section>
+						<pre> <code>git config --global user.email "votre_email@exemple.com"<br>git config --global user.name "votre_nom_utilisateur"<br>git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa"</code></pre>
+						Remplacez votre_email@exemple.com par votre adresse e-mail et votre_nom_utilisateur par votre
+						nom d'utilisateur GitHub.
 
-						</div>
-					</div>
+						<li>Vous pouvez maintenant pousser vos modifications vers GitHub en utilisant la commande git
+							push. Vous ne serez pas invité à entrer votre mot de passe car Git utilisera automatiquement
+							votre clé SSH.</li>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+						Remarque : Assurez-vous de garder votre clé privée en sécurité sur votre ordinateur. Ne partagez
+						jamais votre clé privée avec d'autres personnes.
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-									</ul>
-									<header class="major">
-										<h2>Chapitres</h2>
-									</header>
-									<ul>
-										<li><a href="#branche_distante">Branche distante</a></li>
-										<li><a href="#connexion_ssh">Connexion SSH</a></li>
-										
-									</ul>
-								</nav>
-
-							
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
-						</div>
-					</div>
+				</section>
 
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
 
-	</body>
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Homepage</a></li>
+					</ul>
+					<header class="major">
+						<h2>Chapitres</h2>
+					</header>
+					<ul>
+						<li><a href="#branche_distante">Branche distante</a></li>
+						<li><a href="#connexion_ssh">Connexion SSH</a></li>
+
+					</ul>
+				</nav>
+
+
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem
+						ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
+						tempus aliquam.</p>
+					<ul class="contact">
+						<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+						<li class="icon solid fa-phone">(000) 000-0000</li>
+						<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+							Nashville, TN 00000-0000</li>
+					</ul>
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a
+							href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5
+							UP</a>.</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
