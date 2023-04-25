@@ -141,16 +141,24 @@
 
 					<h2 id="connexion_ssh">6. Automatiser les connexion avec une clé SSH</h2>
 					<ol>
-						<li>Générez une clé SSH sur votre ordinateur en utilisant la commande ssh-keygen. Si vous avez
-							déjà une clé, vous pouvez passer à l'étape suivante.</li>
+						<li>Générez une clé SSH en utilisant la commande ssh-keygen. Si vous possédez
+							déjà une clé et que vous souhaitez l'utilisez, passez à l'étape suivante. Sinon suivez les
+							étapes et répondez aux questions posées par la commande key-gen</li>
+						<pre> <code>ssh-keygen</code></pre>
+
 						<li>Ajoutez la clé publique à votre compte GitHub en accédant à vos paramètres de compte, en
 							sélectionnant "Clés SSH et GPG" et en ajoutant la clé publique.
-							<img src="images/img_github_setting1.png" alt="">
+							<img src="images/img_github_setting1.png" alt="" height="400">
 						</li>
-						<li>Dans le répertoire de votre projet local, utilisez la commande git remote add pour ajouter
-							votre dépôt GitHub distant. Par exemple :</li>
+						<li>Ajoutant la clé publique en cliquant sur le bouton "Nouvelle clé SSH".
+						</li>
+						<img src="images/img_github_addkey.png" alt="">
 
-						<pre> <code>git remote add origin git@github.com:<nom_utilisateur>/<nom_projet>.git</code></pre>
+						<li> a) Nommez votre nouvelle clé (Title)<BR> b) Copiez/collez le contenu de votre clé publique
+							(id_rsa.pub)
+							SSH" (Key)<BR> c) Ajouter votre clé.
+						</li>
+						<img src="images/img_github_sshkey.png" alt="" height="400">
 
 						<li>Utilisez la commande <code>git config</code> pour configurer Git afin d'utiliser votre clé
 							SSH.</li>
