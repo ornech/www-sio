@@ -34,7 +34,7 @@
 				<!-- Content -->
 				<section>
 					<header class="main">
-						<h1>GITHUB</h1>
+						<h1>Utilisez Github avec VSCode</h1>
 					</header>
 
 					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
@@ -44,9 +44,46 @@
 					</p>
 
 					<hr class="major" />
+					<h2 id="creer_rep">1. Créer votre répertoire local</h2>
+					Commencons par créer une répertoire à la racine du serveur apache. Si vous utlisez un autre
+					serveur http, référez vous à sa documentation pour connaitre l'emplacement de la racine du serveur
+					http.
+					<pre>
+						<code>mkdir /var/www/html/mon_site</code>
+					</pre>
 
-					<h2 id="branche_distante">Branche distante</h2>
-					<h3>Ajouter une branche distante</h3>
+
+					<h2 id="activer_suivi">2. Activez le suivi de version en local</h2>
+					<pre>
+						<code>cd /var/www/html/mon_site <br>git init</code>
+					</pre>
+
+					<h2 id="premier_commit">3. Faite votre premier "commit"</h2>
+					<ul>
+						<li>Si vous possédez un site, copiez votre fichiers dans le répertoire /var/www/html/mon_site
+						</li>
+						<li>Sinon, au pire des cas créer un fichiers index.hml vide</li>
+					</ul>
+					Une fois que votre répertoire est peuplé, git détecte automatiquement un chagement. Ben oui, la base
+					de données de git est vide pour l'instant.
+					Pour afficher des changements détecté par git:
+					<pre>
+						<code>git status</code>
+					</pre>
+					La liste des changements devrait s'afficher.
+
+					Ajoutez tous vos fichiers à la "stagging area" (liste des tâches à réaliser à la prochaine
+					validation)
+					<pre>
+						<code>git add .</code>
+					</pre>
+
+					Validez votre premier "commit"
+					<pre>
+						<code>git commit -m "Validation initiale"</code>
+					</pre>
+
+					<h2 id="branche_distante">4. Ajouter une branche distante</h2>
 					<p>La commande
 						<code>git remote add origin git@github.com:[nom_utilisateur]/[nom_du_depot].git</code> permet
 						d'ajouter un nouveau dépôt distant ("remote") à un projet Git existant.<BR>
@@ -67,7 +104,7 @@
 					<h3>Afficher vos branches distantes.</h3>
 					<pre><code>git remote -v</code></pre>
 
-					<h3>Utiliser une branche distante.</h3>
+					<h3>5. Utiliser une branche distante.</h3>
 
 					La commande <code>git push --set-upstream origin master</code> est utilisée pour envoyer les
 					modifications locales d'une branche
@@ -102,9 +139,7 @@
 						la branche "master" du dépôt distant nommé "origin".</p>
 
 
-					<hr class="major" />
-
-					<h2 id="connexion_ssh">Connexion avec SSH</h2>
+					<h2 id="connexion_ssh">6. Automatiser les connexion avec une clé SSH</h2>
 					<ol>
 						<li>Générez une clé SSH sur votre ordinateur en utilisant la commande ssh-keygen. Si vous avez
 							déjà une clé, vous pouvez passer à l'étape suivante.</li>
